@@ -1,0 +1,38 @@
+Style Cop Installation:
+1) Close all Visual Studio instances
+2) Install StyleCop
+3) Open Visual Studio, Right click inside code file and you could see Run StyleCop Option
+4) Copy c# 'StyleCop.Targets' file from 'C:\Program Files (x86)\MSBuild\StyleCop\v4.7' to your project
+5) <SourceAnalysisTreatErrorsAsWarnings>false</SourceAnalysisTreatErrorsAsWarnings> in project file show all styleCop warnings to errors 
+6) should add  <Import Project="$(SolutionDir)\libs\StyleCop\StyleCop.targets" /> into each .csproj file
+
+SetUp StyleCop:
+http://www.bryanavery.co.uk/post/2012/12/27/Setting-up-StyleCop.aspx
+http://stylecop.codeplex.com/wikipage?title=Setting%20Up%20StyleCop%20MSBuild%20Integration
+http://geekswithblogs.net/mapfel/archive/2009/04/27/131484.aspx !!!
+----------------------------------------------
+COPY $(TargetPath) "C:\Program Files (x86)\MSBuild\StyleCop\v4.7" -add to project post - build event
+---------------------------------------------
+
+# Just for curious
+Style Cop settings available only for projects!!!
+Visual Studio Code Analysis is essentially a Visual Studio-integrated version of FxCop.  
+StyleCop is an entirely different beastie that analyzes source code instead of compiled assemblies.
+The target of FxCop and StyleCop is different. 
+FxCop targets at compiled data, it analzes the MSIL code while StyleCop targets at the source code (not compiled). 
+Hence, if we want to check the source code, we'd better choose StyleCop, however, if we want to analze the MSIL code, 
+FxCop will be you best bet. Which one to choose is up to ourselves.
+
+
+# StyleCop tool integration into an MSBuild based build environment
+http://blogs.msdn.com/b/sourceanalysis/archive/2008/05/24/source-analysis-msbuild-integration.aspx
+
+
+#apply StyleCop Settings on several projects!!!
+1)Add Settings.StyleCop into root directory
+2) such way all projects styleScop will get root Settings.StyleCop changes
+3) You can override Settings.StyleCop for each project individually by adding
+for current project  custom Settings.StyleCop
+
+#How to 
+

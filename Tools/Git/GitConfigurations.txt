@@ -1,0 +1,8 @@
+# How to apply .gitignore after you add it into directory:
+Run git bash:
+1)git rm -r --cached .
+2) git add .
+3)git commit -m "fixed untracked files"
+
+#Link to gitignore files for different tools:
+https://github.com/github/gitignore

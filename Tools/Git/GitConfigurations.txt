@@ -11,7 +11,5 @@ https://github.com/github/gitignore
 1)http://www.vislab.net/resources/standard-procedures/ssh-auto-login - complicated way
 2) I just came across the same problem, and the simplest solution I found was to use SSH URL instead of HTTPS one:
 ssh://git@github.com/username/repo.git - easyway (should change project url to ssh) 
-
-#To work with github from windows should download Git hub for Windows:
-http://windows.github.com/
+Change: https://github.com/Gotik88/DRBlog.git -> git@github.com:Gotik88/DRBlog.git !!!
  

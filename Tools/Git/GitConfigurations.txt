@@ -1,8 +1,10 @@
 # How to apply .gitignore after you add it into directory:
+Before run git bush we should add '.gitignore' file to root project directory
 Run git bash:
-1)git rm -r --cached .
-2) git add .
-3)git commit -m "fixed untracked files"
+0)cd  /c/project/                                       // change path
+1)git rm -r --cached .                                 // remove items from index
+2) git add .                                          // rebuild index
+3)git commit -m "fixed untracked files"              // make new commit
 
 #Link to gitignore files for different tools:
 https://github.com/github/gitignore
